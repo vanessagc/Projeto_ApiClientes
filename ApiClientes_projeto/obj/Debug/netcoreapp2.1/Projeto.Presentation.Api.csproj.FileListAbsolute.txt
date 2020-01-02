@@ -2,12 +2,16 @@ C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\bin\Debug\netcoreapp2
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\bin\Debug\netcoreapp2.1\Projeto.Presentation.Api.runtimeconfig.json
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\bin\Debug\netcoreapp2.1\Projeto.Presentation.Api.runtimeconfig.dev.json
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\bin\Debug\netcoreapp2.1\Projeto.Presentation.Api.dll
+C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\bin\Debug\netcoreapp2.1\Projeto.Presentation.Api.pdb
+C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\bin\Debug\netcoreapp2.1\Projeto.Infra.Data.dll
+C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\bin\Debug\netcoreapp2.1\Projeto.Infra.Data.pdb
+C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\Projeto.Presentation.Api.csprojAssemblyReference.cache
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\Projeto.Presentation.Api.csproj.CoreCompileInputs.cache
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\Projeto.Presentation.Api.RazorAssemblyInfo.cache
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\Projeto.Presentation.Api.RazorAssemblyInfo.cs
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\Projeto.Presentation.Api.AssemblyInfoInputs.cache
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\Projeto.Presentation.Api.AssemblyInfo.cs
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\Projeto.Presentation.Api.RazorTargetAssemblyInfo.cache
-C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\bin\Debug\netcoreapp2.1\Projeto.Presentation.Api.pdb
+C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\Projeto.Presentation.Api.csproj.CopyComplete
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\Projeto.Presentation.Api.dll
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\Projeto.Presentation.Api.pdb
