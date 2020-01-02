@@ -11,3 +11,4 @@ C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\ApiClientes_projeto.RazorTargetAssemblyInfo.cache
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\ApiClientes_projeto.dll
 C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\ApiClientes_projeto.pdb
+C:\Vanessa\desafio\ApiClientes_projeto\ApiClientes_projeto\obj\Debug\netcoreapp2.1\ApiClientes_projeto.csprojAssemblyReference.cache

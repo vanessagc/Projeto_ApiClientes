@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\ApiClientes_projeto.csproj": {}
+    "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\Projeto.Presentation.Api.csproj": {}
   },
   "projects": {
-    "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\ApiClientes_projeto.csproj": {
+    "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\Projeto.Presentation.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\ApiClientes_projeto.csproj",
-        "projectName": "ApiClientes_projeto",
-        "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\ApiClientes_projeto.csproj",
+        "projectUniqueName": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\Projeto.Presentation.Api.csproj",
+        "projectName": "Projeto.Presentation.Api",
+        "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\Projeto.Presentation.Api.csproj",
         "packagesPath": "C:\\Users\\iblue.vcarvalho\\.nuget\\packages\\",
         "outputPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\obj\\",
         "projectStyle": "PackageReference",
@@ -63,6 +63,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[2.1.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             }
           },
           "imports": [

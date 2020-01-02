@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apresentação", "Apresenta
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositório de Dados", "Repositório de Dados", "{23DB088B-26FE-47D1-9F39-B464BF10D59A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiClientes_projeto", "ApiClientes_projeto\ApiClientes_projeto.csproj", "{8D9CD73E-18DF-46A2-B379-D0C244C3C455}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.Presentation.Api", "ApiClientes_projeto\Projeto.Presentation.Api.csproj", "{8D9CD73E-18DF-46A2-B379-D0C244C3C455}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
