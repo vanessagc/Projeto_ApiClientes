@@ -15,8 +15,12 @@ namespace Projeto.Presentation.Api.Controllers
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        private readonly ClienteApplicationService _clienteApplicationService = new ClienteApplicationService();
+        private readonly ClienteApplicationService _clienteApplicationService;
 
+        public ClienteController(ClienteApplicationService clienteApplicationService)
+        {
+            this._clienteApplicationService = clienteApplicationService;
+        }
         public ClienteController()
         {
         }

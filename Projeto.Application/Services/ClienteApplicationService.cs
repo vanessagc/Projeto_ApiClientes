@@ -14,8 +14,12 @@ namespace Projeto.Application.Services
         private readonly IEnderecoDomainService _domainEnderecoService;
         private readonly IMapper _mapper;
 
-        public ClienteApplicationService()
+        public ClienteApplicationService(IClienteDomainService domainService, IEnderecoDomainService domainEnderecoService, IMapper mapper)
         {
+            this._domainService = domainService;
+            this._domainEnderecoService = domainEnderecoService;
+            this._mapper = mapper;
+
         }
         public ClienteEnderecoModel Create(ClienteEnderecoModel model)
         {
