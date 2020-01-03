@@ -1,0 +1,9 @@
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Infra.Data\bin\Debug\netcoreapp2.2\Projeto.Infra.Data.deps.json
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Infra.Data\bin\Debug\netcoreapp2.2\Projeto.Infra.Data.dll
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Infra.Data\bin\Debug\netcoreapp2.2\Projeto.Infra.Data.pdb
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Infra.Data\obj\Debug\netcoreapp2.2\Projeto.Infra.Data.csprojAssemblyReference.cache
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Infra.Data\obj\Debug\netcoreapp2.2\Projeto.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Infra.Data\obj\Debug\netcoreapp2.2\Projeto.Infra.Data.AssemblyInfoInputs.cache
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Infra.Data\obj\Debug\netcoreapp2.2\Projeto.Infra.Data.AssemblyInfo.cs
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Infra.Data\obj\Debug\netcoreapp2.2\Projeto.Infra.Data.dll
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Infra.Data\obj\Debug\netcoreapp2.2\Projeto.Infra.Data.pdb

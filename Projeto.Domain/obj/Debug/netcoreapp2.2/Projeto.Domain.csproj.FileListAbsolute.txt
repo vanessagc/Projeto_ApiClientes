@@ -1,0 +1,9 @@
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Domain\bin\Debug\netcoreapp2.2\Projeto.Domain.deps.json
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Domain\bin\Debug\netcoreapp2.2\Projeto.Domain.dll
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Domain\bin\Debug\netcoreapp2.2\Projeto.Domain.pdb
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.csprojAssemblyReference.cache
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.csproj.CoreCompileInputs.cache
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.AssemblyInfoInputs.cache
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.AssemblyInfo.cs
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.dll
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.pdb
