@@ -11,14 +11,15 @@ namespace Projeto.Application.Services
     public class ClienteApplicationService : IClienteApplicationService
     {
         private readonly IClienteDomainService domainService;
+        private readonly IMapper _mapper;
 
         public ClienteApplicationService()
         {
         }
         public void Create(ClienteModel model)
         {
-            var cliente = Mapper.Map<Cliente>(model);
-            //domainService.Create(cliente);
+            var cliente = _mapper.Map<Cliente>(model);
+            domainService.Create(cliente);
         }
 
         public void Dispose()
@@ -33,21 +34,20 @@ namespace Projeto.Application.Services
 
         public List<ClienteModel> SelectAll()
         {
-            //var model = Mapper.Map<ClienteConsultaModel>(domainService.SelectAll());
-            //return model;
-            return null;
+            var model = _mapper.Map<List<ClienteModel>>(domainService.SelectAll());
+            return model;
         }
 
         public ClienteModel SelectById(Guid id)
         {
-            //var model = Mapper.Map<ClienteConsultaModel>(domainService.SelectById(Guid.Parse(id)));
-            //return model;
-            return null;
+            var model = _mapper.Map<ClienteModel>(domainService.SelectById(id));
+            return model;
         }
 
         public void Update(ClienteModel model)
         {
-            //domainService.Update(Mapper.Map<Cliente>(model));
+            var cliente = _mapper.Map<Cliente>(model);
+            domainService.Update(cliente);
         }
     }
 }

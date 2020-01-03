@@ -109,6 +109,10 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "DomainValidation": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[8.6.1, )"
@@ -231,14 +235,6 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
