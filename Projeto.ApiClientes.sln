@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Domain", "Projeto.D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.0-Application", "2.0-Application", "{00AE15F0-0834-4768-A57A-BB7A85E55FDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.Application", "Projeto.Application\Projeto.Application.csproj", "{6B2244BE-C553-4F30-81EC-D80C83DA0299}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Application", "Projeto.Application\Projeto.Application.csproj", "{6B2244BE-C553-4F30-81EC-D80C83DA0299}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,20 +15,23 @@ namespace Projeto.Presentation.Api.Controllers
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        private readonly ClienteApplicationService clienteApplicationService = new ClienteApplicationService();
+        private readonly ClienteApplicationService _clienteApplicationService = new ClienteApplicationService();
 
+        public ClienteController()
+        {
+        }
         [HttpPost]
         public IActionResult Post(ClienteEnderecoModel model)
         {
 
-            clienteApplicationService.Create(model);
+            _clienteApplicationService.Create(model);
             
             return Ok();
         }
         [HttpPut]
-        public IActionResult Put(ClienteModel model)
+        public IActionResult Put(ClienteEnderecoModel model)
         {
-            clienteApplicationService.Update(model);
+            _clienteApplicationService.Update(model);
 
             return Ok();
         }
@@ -36,26 +39,33 @@ namespace Projeto.Presentation.Api.Controllers
         [HttpDelete("{idCliente}")]
         public IActionResult Delete(Guid idCliente)
         {
-            clienteApplicationService.Remove(idCliente);
+            _clienteApplicationService.Remove(idCliente);
 
             return Ok();
         }
 
         [HttpGet]
-        public IEnumerable<ClienteModel> GetAll()
+        public IEnumerable<ClienteEnderecoModel> GetAll()
         {
-            return clienteApplicationService.SelectAll();
+            return _clienteApplicationService.SelectAll();
 
         }
 
        
         [HttpGet("{idCliente}")]
-        public ClienteModel GetById(Guid idCliente)
+        public ClienteEnderecoModel GetById(Guid idCliente)
         {
 
-            return clienteApplicationService.SelectById(idCliente);
+            return _clienteApplicationService.SelectById(idCliente);
 
         }
 
+        [HttpGet("{cpf}")]
+        public ClienteEnderecoModel GetByCpf(string cpf)
+        {
+
+            return _clienteApplicationService.SelectByCpf(cpf);
+
+        }
     }
 }

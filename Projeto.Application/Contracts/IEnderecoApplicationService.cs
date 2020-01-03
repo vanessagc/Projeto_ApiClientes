@@ -6,12 +6,12 @@ namespace Projeto.Application.Contracts
 {
     public interface IEnderecoApplicationService: IDisposable
     {
-        void Create(EnderecoModel model);
-        void Update(EnderecoModel model);
-        void Remove(string id);
+        EnderecoModel Create(EnderecoModel model);
+        EnderecoModel Update(EnderecoModel model);
+        void Remove(Guid id);
 
         List<EnderecoModel> SelectAll();
-        EnderecoModel SelectById(string id);
+        EnderecoModel SelectById(Guid id);
 
     
     }

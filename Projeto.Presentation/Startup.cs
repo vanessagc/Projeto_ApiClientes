@@ -12,6 +12,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Projeto.Application.Contracts;
+using Projeto.Application.Models;
+using Projeto.Application.Services;
+using Projeto.Domain.Contracts.Services;
+using Projeto.Domain.Services;
 using Projeto.Infra.Data.Contracts;
 using Projeto.Infra.Data.Entities;
 using Projeto.Infra.Data.Repositories;
@@ -33,10 +38,19 @@ namespace Projeto.Presentation.Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddAutoMapper(typeof(Startup));
+            AutoMapperConfig(services);
+
+            
+            services.AddSingleton<IClienteDomainService, ClienteDomainService>();
+            services.AddSingleton<IEnderecoDomainService, EnderecoDomainService>();
+
+            services.AddSingleton<IClienteApplicationService, ClienteApplicationService>();
+            services.AddSingleton<IEnderecoApplicationService, EnderecoApplicationService>();
 
             services.AddSingleton<IClienteRepository, ClienteRepository>
                 (map => new ClienteRepository(new ConcurrentDictionary<Guid, Cliente>()));
+            services.AddSingleton<IEnderecoRepository, EnderecoRepository>
+                (map => new EnderecoRepository(new ConcurrentDictionary<Guid, Endereco>()));
 
             #region Configuração do Swagger
 
@@ -83,6 +97,25 @@ namespace Projeto.Presentation.Api
             #endregion
 
             app.UseMvc();
+        }
+
+        private void AutoMapperConfig(IServiceCollection services)
+        {
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<ClienteModel, Cliente>();
+                cfg.CreateMap<Cliente, ClienteModel>();
+                cfg.CreateMap<EnderecoModel, Endereco>();
+                cfg.CreateMap<Endereco, EnderecoModel>();
+                cfg.CreateMap<ClienteEnderecoModel, Cliente>();
+                cfg.CreateMap<ClienteEnderecoModel, Endereco>();
+                cfg.CreateMap<Cliente, ClienteEnderecoModel>();
+                cfg.CreateMap<Endereco, ClienteEnderecoModel>();
+
+            });
+
+            IMapper mapper = config.CreateMapper();
+            services.AddSingleton(mapper);
         }
     }
 }
