@@ -1,17 +1,26 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "96045688185102d7fedaf6456757ca101098ebbc"
+    "signature": "394cfa2565d8d3d3f2320c0ede36f16aaba5ca20"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "Projeto.Domain/1.0.0": {
         "dependencies": {
+          "DomainValidation": "1.0.0",
           "FluentValidation.AspNetCore": "8.6.1"
         },
         "runtime": {
           "Projeto.Domain.dll": {}
+        }
+      },
+      "DomainValidation/1.0.0": {
+        "runtime": {
+          "lib/net453/DomainValidation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "FluentValidation/8.6.1": {
@@ -1738,6 +1747,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "DomainValidation/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u6NxTpdHj2pCA0Kh9FfgJh9XZJA6NsEKu/kvjzRLT3Exn+ik88UOZOWNsczt8rXZFgZ50dzUZ0Vq2tHXtJR/mQ==",
+      "path": "domainvalidation/1.0.0",
+      "hashPath": "domainvalidation.1.0.0.nupkg.sha512"
     },
     "FluentValidation/8.6.1": {
       "type": "package",

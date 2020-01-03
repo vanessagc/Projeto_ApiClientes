@@ -1,12 +1,12 @@
-C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\obj\Debug\netcoreapp2.1\Projeto.Application.csprojAssemblyReference.cache
-C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\obj\Debug\netcoreapp2.1\Projeto.Application.csproj.CoreCompileInputs.cache
-C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\obj\Debug\netcoreapp2.1\Projeto.Application.AssemblyInfoInputs.cache
-C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\obj\Debug\netcoreapp2.1\Projeto.Application.AssemblyInfo.cs
 C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\bin\Debug\netcoreapp2.1\Projeto.Application.deps.json
 C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\bin\Debug\netcoreapp2.1\Projeto.Application.dll
 C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\bin\Debug\netcoreapp2.1\Projeto.Application.pdb
 C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\bin\Debug\netcoreapp2.1\Projeto.Domain.dll
 C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\bin\Debug\netcoreapp2.1\Projeto.Domain.pdb
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\obj\Debug\netcoreapp2.1\Projeto.Application.csprojAssemblyReference.cache
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\obj\Debug\netcoreapp2.1\Projeto.Application.csproj.CoreCompileInputs.cache
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\obj\Debug\netcoreapp2.1\Projeto.Application.AssemblyInfoInputs.cache
+C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\obj\Debug\netcoreapp2.1\Projeto.Application.AssemblyInfo.cs
 C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\obj\Debug\netcoreapp2.1\Projeto.Application.csproj.CopyComplete
 C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\obj\Debug\netcoreapp2.1\Projeto.Application.dll
 C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Application\obj\Debug\netcoreapp2.1\Projeto.Application.pdb

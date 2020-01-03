@@ -1,11 +1,17 @@
 ﻿using DomainValidation.Validation;
 using Projeto.Domain.Validations;
 using System;
+using System.Collections.Generic;
 
 namespace Projeto.Domain.Entities
 {
     public class Cliente
     {
+        public Cliente()
+        {
+            IdCliente = Guid.NewGuid();
+            Enderecos = new List<Endereco>();
+        }
         public Guid IdCliente { get; set; }
       
         public string Nome { get; set; }
@@ -17,6 +23,9 @@ namespace Projeto.Domain.Entities
         public DateTime DataNascimento { get; set; }
 
         public ValidationResult ValidationResult { get; set; }
+
+        public virtual ICollection<Endereco> Enderecos { get; set; }
+
         public bool IsValid()
         {
             ValidationResult = new ClienteEhValido().Validate(this);

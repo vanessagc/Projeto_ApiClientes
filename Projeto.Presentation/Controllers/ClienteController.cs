@@ -18,7 +18,7 @@ namespace Projeto.Presentation.Api.Controllers
         private readonly ClienteApplicationService clienteApplicationService = new ClienteApplicationService();
 
         [HttpPost]
-        public IActionResult Post(ClienteModel model)
+        public IActionResult Post(ClienteEnderecoModel model)
         {
 
             clienteApplicationService.Create(model);

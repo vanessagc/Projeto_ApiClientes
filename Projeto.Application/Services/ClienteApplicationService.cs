@@ -16,10 +16,26 @@ namespace Projeto.Application.Services
         public ClienteApplicationService()
         {
         }
-        public void Create(ClienteModel model)
+        public ClienteEnderecoModel Create(ClienteEnderecoModel model)
         {
             var cliente = _mapper.Map<Cliente>(model);
-            domainService.Create(cliente);
+            var endereco = _mapper.Map<Endereco>(model);
+            Cliente clienteRetorno;
+
+            cliente.Enderecos.Add(endereco);
+
+            if (!cliente.ValidationResult.IsValid)
+            {
+                clienteRetorno = domainService.Create(cliente);
+                model = _mapper.Map<ClienteEnderecoModel>(clienteRetorno);
+            } else
+            {
+                cliente.ValidationResult.Message = "CPF inválido!";
+                model = _mapper.Map<ClienteEnderecoModel>(cliente);
+            }
+
+            return model;
+
         }
 
         public void Dispose()
@@ -38,16 +54,25 @@ namespace Projeto.Application.Services
             return model;
         }
 
+        public ClienteModel SelectByCpf(string Cpf)
+        {
+            var model = _mapper.Map<ClienteModel>(domainService.SelectByCpf(Cpf));
+            return model;
+        }
+
         public ClienteModel SelectById(Guid id)
         {
             var model = _mapper.Map<ClienteModel>(domainService.SelectById(id));
             return model;
         }
 
-        public void Update(ClienteModel model)
+        public ClienteModel Update(ClienteModel model)
         {
             var cliente = _mapper.Map<Cliente>(model);
             domainService.Update(cliente);
+            model = _mapper.Map<ClienteModel>(cliente);
+
+            return model;
         }
     }
 }

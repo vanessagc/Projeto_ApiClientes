@@ -13941,7 +13941,6 @@
       "path": "system.valuetuple/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/.xml",
@@ -14029,7 +14028,6 @@
       "path": "system.xml.xdocument/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -14099,7 +14097,6 @@
       "path": "system.xml.xmldocument/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -14517,9 +14514,6 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\Projeto.Presentation.Api.csproj": {
-              "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\Projeto.Presentation.Api.csproj"
-            },
             "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Presentation\\Projeto.Presentation.Api.csproj": {
               "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Presentation\\Projeto.Presentation.Api.csproj"
             }

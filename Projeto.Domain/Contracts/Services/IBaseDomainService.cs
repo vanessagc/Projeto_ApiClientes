@@ -7,11 +7,13 @@ namespace Projeto.Domain.Contracts.Services
     public interface IBaseDomainService<TEntity> : IDisposable
         where TEntity : class
     {
-        void Create(TEntity obj);
-        void Update(TEntity obj);
+        TEntity Create(TEntity obj);
+        TEntity Update(TEntity obj);
         TEntity Remove(Guid id);
 
         List<TEntity> SelectAll();
         TEntity SelectById(Guid id);
+
+        TEntity SelectByCpf(string Cpf);
     }
 }

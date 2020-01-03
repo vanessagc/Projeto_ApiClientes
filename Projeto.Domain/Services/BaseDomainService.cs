@@ -2,7 +2,6 @@
 using Projeto.Domain.Contracts.Services;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Projeto.Domain.Services
 {
@@ -16,9 +15,9 @@ namespace Projeto.Domain.Services
         {
             this.repository = repository;
         }
-        public virtual void Create(TEntity obj)
+        public virtual TEntity Create(TEntity obj)
         {
-            repository.Create(obj);
+            return repository.Create(obj);
         }
 
         public virtual void Dispose()
@@ -36,14 +35,20 @@ namespace Projeto.Domain.Services
             return repository.SelectAll();
         }
 
+        public TEntity SelectByCpf(string Cpf)
+        {
+            throw new NotImplementedException();
+        }
+
         public virtual TEntity SelectById(Guid id)
         {
             return repository.SelectById(id);
         }
 
-        public virtual void Update(TEntity obj)
+        public virtual TEntity Update(TEntity obj)
         {
-            repository.Update(obj);
+            return repository.Update(obj);
         }
+
     }
 }
