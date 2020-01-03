@@ -16,9 +16,11 @@ namespace Projeto.Infra.Data.Repositories
         {
             this.context = context;
         }
-        public void Create(Cliente obj)
+        public Cliente Create(Cliente obj)
         {
             context[obj.IdCliente] = obj;
+
+            return obj;
         }
 
         public Cliente Remove(Guid id)
@@ -42,10 +44,12 @@ namespace Projeto.Infra.Data.Repositories
                     .SingleOrDefault(p => p.IdCliente.Equals(id));
         }
 
-        public void Update(Cliente obj)
+        public Cliente Update(Cliente obj)
         {
             if(context[obj.IdCliente] != null)
                 context[obj.IdCliente] = obj;
+
+            return obj;
         }
     }
 }

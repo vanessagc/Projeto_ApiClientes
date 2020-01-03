@@ -16,9 +16,11 @@ namespace Projeto.Infra.Data.Repositories
         {
             this.context = context;
         }
-        public void Create(Endereco obj)
+        public Endereco Create(Endereco obj)
         {
             context[obj.IdEndereco] = obj;
+            return obj;
+
         }
 
         public Endereco Remove(Guid id)
@@ -42,10 +44,12 @@ namespace Projeto.Infra.Data.Repositories
                     .SingleOrDefault(p => p.IdEndereco.Equals(id));
         }
 
-        public void Update(Endereco obj)
+        public Endereco Update(Endereco obj)
         {
             if(context[obj.IdEndereco] != null)
                 context[obj.IdEndereco] = obj;
+
+            return obj;
         }
     }
 }
