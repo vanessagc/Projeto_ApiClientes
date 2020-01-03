@@ -12,13 +12,12 @@ namespace Projeto.Application.Services
     {
         private readonly IClienteDomainService domainService;
 
-        public ClienteApplicationService(IClienteDomainService domainService)
+        public ClienteApplicationService()
         {
-            this.domainService = domainService;
         }
-        public void Create(ClienteCadastroModel model)
+        public void Create(ClienteModel model)
         {
-            //var cliente = Mapper.Map<Cliente>(model);
+            var cliente = Mapper.Map<Cliente>(model);
             //domainService.Create(cliente);
         }
 
@@ -27,26 +26,26 @@ namespace Projeto.Application.Services
             domainService.Dispose();
         }
 
-        public void Remove(string id)
+        public void Remove(Guid id)
         {
-            domainService.Remove(Guid.Parse(id));
+            domainService.Remove(id);
         }
 
-        public List<ClienteConsultaModel> SelectAll()
+        public List<ClienteModel> SelectAll()
         {
-            var model = Mapper.Map<ClienteConsultaModel>(domainService.SelectAll());
+            //var model = Mapper.Map<ClienteConsultaModel>(domainService.SelectAll());
             //return model;
             return null;
         }
 
-        public ClienteConsultaModel SelectById(string id)
+        public ClienteModel SelectById(Guid id)
         {
             //var model = Mapper.Map<ClienteConsultaModel>(domainService.SelectById(Guid.Parse(id)));
             //return model;
             return null;
         }
 
-        public void Update(ClienteEdicaoModel model)
+        public void Update(ClienteModel model)
         {
             //domainService.Update(Mapper.Map<Cliente>(model));
         }

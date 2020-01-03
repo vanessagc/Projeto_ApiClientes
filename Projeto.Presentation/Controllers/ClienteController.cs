@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Projeto.Infra.Data.Contracts;
 using Projeto.Infra.Data.Entities;
 using Projeto.Application.Models;
+using Projeto.Application.Services;
 
 namespace Projeto.Presentation.Api.Controllers
 {
@@ -14,52 +15,46 @@ namespace Projeto.Presentation.Api.Controllers
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult Post([FromBody] ClienteCadastroModel model,
-            [FromServices] IClienteRepository repository,
-            [FromServices] IMapper mapper)
-        {
-            var cliente = mapper.Map<Cliente>(model);
-            repository.Create(cliente);
+        private readonly ClienteApplicationService clienteApplicationService = new ClienteApplicationService();
 
+        [HttpPost]
+        public IActionResult Post(ClienteModel model)
+        {
+
+            clienteApplicationService.Create(model);
+            
             return Ok();
         }
         [HttpPut]
-        public IActionResult Put([FromBody] ClienteEdicaoModel model,
-            [FromServices] IClienteRepository repository,
-            [FromServices] IMapper mapper)
+        public IActionResult Put(ClienteModel model)
         {
-            var cliente = mapper.Map<Cliente>(model);
-            repository.Update(cliente);
+            clienteApplicationService.Update(model);
 
             return Ok();
         }
 
         [HttpDelete("{idCliente}")]
-        public IActionResult Delete(Guid idCliente,
-            [FromServices] IClienteRepository repository)
+        public IActionResult Delete(Guid idCliente)
         {
-            repository.Remove(idCliente);
+            clienteApplicationService.Remove(idCliente);
+
             return Ok();
         }
 
         [HttpGet]
-        [ProducesResponseType(typeof(List<ClienteConsultaModel>), 200)]
-        public IActionResult GetAll([FromServices] IClienteRepository repository)
+        public IEnumerable<ClienteModel> GetAll()
         {
-            repository.SelectAll();
+            return clienteApplicationService.SelectAll();
 
-            return Ok();
         }
 
        
         [HttpGet("{idCliente}")]
-        [ProducesResponseType(typeof(ClienteConsultaModel), 200)]
-        public IActionResult GetById(Guid idCliente, [FromServices] IClienteRepository repository)
+        public ClienteModel GetById(Guid idCliente)
         {
-            repository.SelectById(idCliente);
 
-            return Ok();
+            return clienteApplicationService.SelectById(idCliente);
+
         }
 
     }

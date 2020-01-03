@@ -28,7 +28,7 @@ namespace Projeto.Presentation.Tests.Cenarios
         public async Task Cliente_Post_ReturnsOkResponse()
         {
 
-            var model = new ClienteCadastroModel
+            var model = new ClienteModel
             {
                 Nome = "Cliente Teste",
                 Cpf = "00842426710",
@@ -47,9 +47,9 @@ namespace Projeto.Presentation.Tests.Cenarios
         [Fact] 
         public async Task Cliente_Put_ReturnsOkResponse()
         {
-            var model = new ClienteEdicaoModel
+            var model = new ClienteModel
             {
-                IdCliente="123",
+                IdCliente=Guid.NewGuid(),
                 Nome = "Cliente Teste",
                 Cpf = "00842426710",
                 Idade = 40,

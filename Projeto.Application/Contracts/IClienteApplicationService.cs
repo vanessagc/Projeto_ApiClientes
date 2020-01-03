@@ -6,11 +6,11 @@ namespace Projeto.Application.Contracts
 {
     public interface IClienteApplicationService: IDisposable
     {
-        void Create(ClienteCadastroModel model);
-        void Update(ClienteEdicaoModel model);
-        void Remove(string id);
+        void Create(ClienteModel model);
+        void Update(ClienteModel model);
+        void Remove(Guid id);
 
-        List<ClienteConsultaModel> SelectAll();
-        ClienteConsultaModel SelectById(string id);
+        List<ClienteModel> SelectAll();
+        ClienteModel SelectById(Guid id);
     }
 }
