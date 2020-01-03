@@ -52,6 +52,7 @@ namespace Projeto.Application.Services
 
         public void Remove(Guid id)
         {
+
             var cliente = _domainService.SelectById(id);
 
             foreach(Endereco endereco in cliente.Enderecos)
