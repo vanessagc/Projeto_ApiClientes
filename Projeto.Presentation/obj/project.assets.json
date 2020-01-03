@@ -4699,6 +4699,21 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Projeto.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Projeto.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Projeto.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Projeto.Application.dll": {}
+        }
+      },
       "Projeto.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -12383,7 +12398,6 @@
       "path": "system.valuetuple/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/.xml",
@@ -12471,7 +12485,6 @@
       "path": "system.xml.xdocument/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -12541,7 +12554,6 @@
       "path": "system.xml.xmldocument/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -12722,6 +12734,11 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Projeto.Application/1.0.0": {
+      "type": "project",
+      "path": "../Projeto.Application/Projeto.Application.csproj",
+      "msbuildProject": "../Projeto.Application/Projeto.Application.csproj"
+    },
     "Projeto.Domain/1.0.0": {
       "type": "project",
       "path": "../Projeto.Domain/Projeto.Domain.csproj",
@@ -12741,6 +12758,7 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.10",
+      "Projeto.Application >= 1.0.0",
       "Projeto.Domain >= 1.0.0",
       "Projeto.Infra.Data >= 1.0.0",
       "Swashbuckle.AspNetCore >= 4.0.1"
@@ -12778,6 +12796,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Application\\Projeto.Application.csproj": {
+              "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Application\\Projeto.Application.csproj"
+            },
             "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj": {
               "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj"
             },

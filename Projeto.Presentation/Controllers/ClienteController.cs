@@ -6,7 +6,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Projeto.Infra.Data.Contracts;
 using Projeto.Infra.Data.Entities;
-using Projeto.Presentation.Api.Models;
+using Projeto.Application.Models;
 
 namespace Projeto.Presentation.Api.Controllers
 {

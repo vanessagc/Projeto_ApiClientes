@@ -34,7 +34,7 @@ namespace Projeto.Application.Services
 
         public List<ClienteConsultaModel> SelectAll()
         {
-            //var model = Mapper.Map<ClienteConsultaModel>(domainService.SelectAll());
+            var model = Mapper.Map<ClienteConsultaModel>(domainService.SelectAll());
             //return model;
             return null;
         }

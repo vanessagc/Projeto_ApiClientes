@@ -18,6 +18,19 @@ namespace Projeto.Application.Adapters
                 .AfterMap((de, para)
                     => para.IdCliente = de.IdEndereco.ToString());
 
+            CreateMap<Cliente, ClienteCadastroModel>();
+
+            CreateMap<Endereco, EnderecoCadastroModel>();
+
+            CreateMap<Cliente, ClienteEdicaoModel>()
+               .AfterMap((de, para)
+                    => para.IdCliente = de.IdCliente.ToString());
+
+            CreateMap<Endereco, EnderecoEdicaoModel>()
+                .AfterMap((de, para)
+                    => para.IdEndereco = de.IdEndereco.ToString())
+                .AfterMap((de, para)
+                    => para.IdCliente = de.IdEndereco.ToString());
         }
     }
 }

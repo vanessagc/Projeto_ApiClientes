@@ -18,6 +18,10 @@ namespace Projeto.Application.Adapters
                     .AfterMap((de, para)
                         => para.IdCliente = Guid.Parse(de.IdCliente));
 
+            CreateMap<ClienteConsultaModel, Cliente>()
+                    .AfterMap((de, para)
+                        => para.IdCliente = Guid.Parse(de.IdCliente));
+
             CreateMap<EnderecoCadastroModel, Endereco>()
                     .AfterMap((de, para)
                         => para.IdEndereco = Guid.NewGuid())
@@ -29,7 +33,13 @@ namespace Projeto.Application.Adapters
                         => para.IdEndereco = Guid.Parse(de.IdEndereco))
                     .AfterMap((de, para)
                         => para.IdCliente = Guid.Parse(de.IdCliente));
+
+            CreateMap<EnderecoConsultaModel, Endereco>()
+                    .AfterMap((de, para)
+                        => para.IdEndereco = Guid.Parse(de.IdEndereco))
+                    .AfterMap((de, para)
+                        => para.IdCliente = Guid.Parse(de.IdCliente));
         }
-       
+
     }
 }

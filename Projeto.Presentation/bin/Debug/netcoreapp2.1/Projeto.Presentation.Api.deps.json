@@ -30,6 +30,7 @@
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.10",
+          "Projeto.Application": "1.0.0",
           "Projeto.Domain": "1.0.0",
           "Projeto.Infra.Data": "1.0.0",
           "Swashbuckle.AspNetCore": "4.0.1"
@@ -441,6 +442,19 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "Projeto.Application/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Projeto.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Projeto.Application.dll": {}
+        },
+        "compile": {
+          "Projeto.Application.dll": {}
         }
       },
       "Projeto.Domain/1.0.0": {
@@ -3762,6 +3776,11 @@
       "sha512": "sha512-td7x21K8LalpjTWCzW/nQboQIFbq9i0r+PCyBBCdLWWnm4NBcdN18vpz/G9hCpUaCIfRL+ZxJNVTywlNlB1aLQ==",
       "path": "system.linq.parallel/4.3.0",
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
+    },
+    "Projeto.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Projeto.Domain/1.0.0": {
       "type": "project",

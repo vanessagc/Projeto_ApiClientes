@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Projeto.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Application", "Projeto.Application.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Projeto.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain", "Projeto.Domain.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Projeto.Infra.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Infra.Data", "Projeto.Infra.Data.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Projeto.Presentation.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Presentation", "Projeto.Presentation.Api.csproj", "0")]
