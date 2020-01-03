@@ -89,6 +89,60 @@
         }
       }
     },
+    "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj",
+        "projectName": "Projeto.Domain",
+        "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj",
+        "packagesPath": "C:\\Users\\iblue.vcarvalho\\.nuget\\packages\\",
+        "outputPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\iblue.vcarvalho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://mongeral.pkgs.visualstudio.com/_packaging/Nuget-Mongeral@Local/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/mongeral/_packaging/MongeralGAC/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Infra.Data\\Projeto.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -173,6 +227,9 @@
             "projectReferences": {
               "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\Projeto.Presentation.Api.csproj": {
                 "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\Projeto.Presentation.Api.csproj"
+              },
+              "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Presentation\\Projeto.Presentation.Api.csproj": {
+                "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Presentation\\Projeto.Presentation.Api.csproj"
               }
             }
           }
@@ -224,6 +281,94 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.4.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Presentation\\Projeto.Presentation.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Presentation\\Projeto.Presentation.Api.csproj",
+        "projectName": "Projeto.Presentation.Api",
+        "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Presentation\\Projeto.Presentation.Api.csproj",
+        "packagesPath": "C:\\Users\\iblue.vcarvalho\\.nuget\\packages\\",
+        "outputPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Presentation\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\iblue.vcarvalho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://mongeral.pkgs.visualstudio.com/_packaging/Nuget-Mongeral@Local/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/mongeral/_packaging/MongeralGAC/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj": {
+                "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj"
+              },
+              "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Infra.Data\\Projeto.Infra.Data.csproj": {
+                "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Infra.Data\\Projeto.Infra.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             }
           },
           "imports": [

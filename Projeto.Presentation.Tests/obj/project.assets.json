@@ -5332,6 +5332,16 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
+      "Projeto.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Projeto.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Projeto.Domain.dll": {}
+        }
+      },
       "Projeto.Infra.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -5349,6 +5359,7 @@
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.10",
+          "Projeto.Domain": "1.0.0",
           "Projeto.Infra.Data": "1.0.0",
           "Swashbuckle.AspNetCore": "4.0.1"
         },
@@ -14309,6 +14320,11 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
+    "Projeto.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Projeto.Domain/Projeto.Domain.csproj",
+      "msbuildProject": "../Projeto.Domain/Projeto.Domain.csproj"
+    },
     "Projeto.Infra.Data/1.0.0": {
       "type": "project",
       "path": "../Projeto.Infra.Data/Projeto.Infra.Data.csproj",
@@ -14316,8 +14332,8 @@
     },
     "Projeto.Presentation.Api/1.0.0": {
       "type": "project",
-      "path": "../ApiClientes_projeto/Projeto.Presentation.Api.csproj",
-      "msbuildProject": "../ApiClientes_projeto/Projeto.Presentation.Api.csproj"
+      "path": "../Projeto.Presentation/Projeto.Presentation.Api.csproj",
+      "msbuildProject": "../Projeto.Presentation/Projeto.Presentation.Api.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -14367,6 +14383,9 @@
           "projectReferences": {
             "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\Projeto.Presentation.Api.csproj": {
               "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\ApiClientes_projeto\\Projeto.Presentation.Api.csproj"
+            },
+            "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Presentation\\Projeto.Presentation.Api.csproj": {
+              "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Presentation\\Projeto.Presentation.Api.csproj"
             }
           }
         }

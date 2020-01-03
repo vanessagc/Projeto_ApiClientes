@@ -1102,6 +1102,14 @@
           "Microsoft.NET.Test.Sdk": "15.0.0"
         }
       },
+      "Projeto.Domain/1.0.0": {
+        "runtime": {
+          "Projeto.Domain.dll": {}
+        },
+        "compile": {
+          "Projeto.Domain.dll": {}
+        }
+      },
       "Projeto.Infra.Data/1.0.0": {
         "runtime": {
           "Projeto.Infra.Data.dll": {}
@@ -1115,6 +1123,7 @@
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.10",
+          "Projeto.Domain": "1.0.0",
           "Projeto.Infra.Data": "1.0.0",
           "Swashbuckle.AspNetCore": "4.0.1"
         },
@@ -4594,6 +4603,11 @@
       "sha512": "sha512-mBXd1lp1TQr4to2nFv+c4Tf+RnPoQPKglzwLdbdirOUxRaJsCUNDUx2y7E6j9ajgISlTTp1CydFBZCRCUIrwDg==",
       "path": "xunit.runner.visualstudio/2.4.1",
       "hashPath": "xunit.runner.visualstudio.2.4.1.nupkg.sha512"
+    },
+    "Projeto.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Projeto.Infra.Data/1.0.0": {
       "type": "project",
