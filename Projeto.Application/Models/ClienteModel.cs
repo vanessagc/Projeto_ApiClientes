@@ -20,7 +20,7 @@ namespace Projeto.Application.Models
         [MaxLength(30, ErrorMessage = "Máximo {0} caracteres")]
         public string Nome { get; set; }
 
-        [Required(ErrorMessage = "Preencha o campo Nome")]
+        [Required(ErrorMessage = "Preencha o campo Cpf")]
         [MaxLength(11, ErrorMessage = "Máximo {0} caracteres")]
         public string Cpf { get; set; }
 
