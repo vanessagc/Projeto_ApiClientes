@@ -31,7 +31,7 @@ namespace Projeto.Infra.Data.Repositories
             return endereco;
         }
 
-        public List<Endereco> SelectAll()
+        public IEnumerable<Endereco> SelectAll()
         {
             return context.Values
                     .OrderBy(p => p.Estado).ThenBy(p => p.Cidade).ThenBy(p => p.Bairro).ThenBy(p => p.Logradouro)

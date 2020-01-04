@@ -11,9 +11,9 @@ namespace Projeto.Domain.Contracts.Services
         TEntity Update(TEntity obj);
         TEntity Remove(Guid id);
 
-        List<TEntity> SelectAll();
+        IEnumerable<TEntity> SelectAll();
         TEntity SelectById(Guid id);
 
-        TEntity SelectByCpf(string Cpf);
+       
     }
 }

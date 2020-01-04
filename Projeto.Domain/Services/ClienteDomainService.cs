@@ -17,5 +17,15 @@ namespace Projeto.Domain.Services
         {
             this.repository = repository;
         }
+
+        public Cliente SelectByCpf(string cpf)
+        {
+            return repository.SelectByCpf(cpf);
+        }
+
+        public Cliente SelectByNome(string nome)
+        {
+            return repository.SelectByNome(nome);
+        }
     }
 }

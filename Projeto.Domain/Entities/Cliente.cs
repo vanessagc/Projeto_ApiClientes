@@ -24,7 +24,7 @@ namespace Projeto.Domain.Entities
 
         public ValidationResult ValidationResult { get; set; }
 
-        public virtual ICollection<Endereco> Enderecos { get; set; }
+        public virtual IEnumerable<Endereco> Enderecos { get; set; }
 
         public bool IsValid()
         {

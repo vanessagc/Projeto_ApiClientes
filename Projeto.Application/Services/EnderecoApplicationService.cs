@@ -13,16 +13,17 @@ namespace Projeto.Application.Services
         private readonly IEnderecoDomainService _domainService;
         private readonly IMapper _mapper;
 
-        public EnderecoApplicationService()
+        public EnderecoApplicationService(IEnderecoDomainService domainService, IMapper mapper)
         {
+            this._domainService = domainService;
+            this._mapper = mapper;
         }
         public EnderecoModel Create(EnderecoModel model)
         {
             var endereco = _mapper.Map<Endereco>(model);
-            Endereco enderecoRetorno;
 
-                enderecoRetorno = _domainService.Create(endereco);
-                model = _mapper.Map<EnderecoModel>(enderecoRetorno);
+            var enderecoRetorno = _domainService.Create(endereco);
+            model = _mapper.Map<EnderecoModel>(enderecoRetorno);
 
             return model;
         }
@@ -37,9 +38,9 @@ namespace Projeto.Application.Services
             _domainService.Remove(id);
         }
 
-        public List<EnderecoModel> SelectAll()
+        public IEnumerable<EnderecoModel> SelectAll()
         {
-            var model = _mapper.Map<List<EnderecoModel>>(_domainService.SelectAll());
+            var model = _mapper.Map<IEnumerable<EnderecoModel>>(_domainService.SelectAll());
             return model;
         }
 
@@ -57,5 +58,6 @@ namespace Projeto.Application.Services
 
             return model;
         }
+
     }
 }

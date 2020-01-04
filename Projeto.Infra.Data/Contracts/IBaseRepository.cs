@@ -11,7 +11,7 @@ namespace Projeto.Infra.Data.Contracts
         TEntity Update(TEntity obj);
         TEntity Remove(Guid id);
 
-        List<TEntity> SelectAll();
+        IEnumerable<TEntity> SelectAll();
         TEntity SelectById(Guid id);
     }
 }

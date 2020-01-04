@@ -30,15 +30,11 @@ namespace Projeto.Domain.Services
             return repository.Remove(id);
         }
 
-        public virtual List<TEntity> SelectAll()
+        public virtual IEnumerable<TEntity> SelectAll()
         {
             return repository.SelectAll();
         }
 
-        public TEntity SelectByCpf(string Cpf)
-        {
-            throw new NotImplementedException();
-        }
 
         public virtual TEntity SelectById(Guid id)
         {

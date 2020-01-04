@@ -10,7 +10,7 @@ namespace Projeto.Application.Contracts
         EnderecoModel Update(EnderecoModel model);
         void Remove(Guid id);
 
-        List<EnderecoModel> SelectAll();
+        IEnumerable<EnderecoModel> SelectAll();
         EnderecoModel SelectById(Guid id);
 
     

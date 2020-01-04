@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Projeto.Infra.Data.Contracts;
-using Projeto.Infra.Data.Entities;
 using Projeto.Application.Models;
-using Projeto.Application.Services;
+using Projeto.Application.Contracts;
+using Projeto.Presentation.Api.Validations;
 
 namespace Projeto.Presentation.Api.Controllers
 {
@@ -15,61 +11,116 @@ namespace Projeto.Presentation.Api.Controllers
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        private readonly ClienteApplicationService _clienteApplicationService;
-
-        public ClienteController(ClienteApplicationService clienteApplicationService)
-        {
-            this._clienteApplicationService = clienteApplicationService;
-        }
-        public ClienteController()
-        {
-        }
         [HttpPost]
-        public IActionResult Post(ClienteEnderecoModel model)
+        public IActionResult Post([FromServices]IClienteApplicationService service, ClienteEnderecoModel model)
         {
-
-            _clienteApplicationService.Create(model);
-            
-            return Ok();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelStateValidaton.GetErrors(ModelState));
+            try
+            {
+                service.Create(model);
+                return Ok();
+            }
+            catch(Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
         [HttpPut]
-        public IActionResult Put(ClienteEnderecoModel model)
+        public IActionResult Put([FromServices]IClienteApplicationService service, ClienteEnderecoModel model)
         {
-            _clienteApplicationService.Update(model);
-
-            return Ok();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelStateValidaton.GetErrors(ModelState));
+            try
+            {
+                service.Update(model);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpDelete("{idCliente}")]
-        public IActionResult Delete(Guid idCliente)
+        public IActionResult Delete([FromServices]IClienteApplicationService service, Guid idCliente)
         {
-            _clienteApplicationService.Remove(idCliente);
-
-            return Ok();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelStateValidaton.GetErrors(ModelState));
+            try
+            {
+                service.Remove(idCliente);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpGet]
-        public IEnumerable<ClienteEnderecoModel> GetAll()
+        public IActionResult Get([FromServices]IClienteApplicationService service)
         {
-            return _clienteApplicationService.SelectAll();
-
+            try
+            {
+                return Ok(service.SelectAll());
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
-       
+
         [HttpGet("{idCliente}")]
-        public ClienteEnderecoModel GetById(Guid idCliente)
+        public IActionResult Get([FromServices]IClienteApplicationService service, Guid idCliente)
         {
 
-            return _clienteApplicationService.SelectById(idCliente);
-
+            if (!ModelState.IsValid)
+                return BadRequest(ModelStateValidaton.GetErrors(ModelState));
+            try
+            {
+                service.SelectById(idCliente);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpGet("{cpf}")]
-        public ClienteEnderecoModel GetByCpf(string cpf)
+        public IActionResult GetByCpf([FromServices]IClienteApplicationService service, string cpf)
         {
 
-            return _clienteApplicationService.SelectByCpf(cpf);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelStateValidaton.GetErrors(ModelState));
+            try
+            {
+                service.SelectByCpf(cpf);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+        }
 
+        [HttpGet("{nome}")]
+        public IActionResult Get([FromServices]IClienteApplicationService service, string nome)
+        {
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelStateValidaton.GetErrors(ModelState));
+            try
+            {
+                service.SelectByNome(nome);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
     }
 }

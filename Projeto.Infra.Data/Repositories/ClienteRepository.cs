@@ -31,7 +31,7 @@ namespace Projeto.Infra.Data.Repositories
             return cliente;
         }
 
-        public List<Cliente> SelectAll()
+        public IEnumerable<Cliente> SelectAll()
         {
             return context.Values
                     .OrderBy(p => p.Nome)

@@ -24,18 +24,16 @@ namespace Projeto.Application.Services
         public ClienteEnderecoModel Create(ClienteEnderecoModel model)
         {
             var cliente = _mapper.Map<Cliente>(model);
-            cliente.Enderecos = _mapper.Map<ICollection<Endereco>>(model);
-            Cliente clienteRetorno;
-            Endereco enderecoRetorno;
+            cliente.Enderecos = _mapper.Map<IEnumerable<Endereco>>(model);
 
             if (!cliente.ValidationResult.IsValid)
             {
-                clienteRetorno = _domainService.Create(cliente);
+                var clienteRetorno = _domainService.Create(cliente);
                 model = _mapper.Map<ClienteEnderecoModel>(clienteRetorno);
 
                 foreach(Endereco endereco in cliente.Enderecos)
                 {
-                    enderecoRetorno = _domainEnderecoService.Create(endereco);
+                    var enderecoRetorno = _domainEnderecoService.Create(endereco);
                     model = _mapper.Map<ClienteEnderecoModel>(enderecoRetorno);
                 }
 
@@ -69,7 +67,7 @@ namespace Projeto.Application.Services
 
         public IEnumerable<ClienteEnderecoModel> SelectAll()
         {
-            var model = _mapper.Map<List<ClienteEnderecoModel>>(_domainService.SelectAll());
+            var model = _mapper.Map<IEnumerable<ClienteEnderecoModel>>(_domainService.SelectAll());
             return model;
         }
 
@@ -85,10 +83,16 @@ namespace Projeto.Application.Services
             return model;
         }
 
+        public ClienteEnderecoModel SelectByNome(string nome)
+        {
+            var model = _mapper.Map<ClienteEnderecoModel>(_domainService.SelectByNome(nome));
+            return model;
+        }
+
         public ClienteEnderecoModel Update(ClienteEnderecoModel model)
         {
             var cliente = _mapper.Map<Cliente>(model);
-            cliente.Enderecos = _mapper.Map<ICollection<Endereco>>(model);
+            cliente.Enderecos = _mapper.Map<IEnumerable<Endereco>>(model);
 
             var clienteRetorno = _domainService.Update(cliente);
             model = _mapper.Map<ClienteEnderecoModel>(clienteRetorno);

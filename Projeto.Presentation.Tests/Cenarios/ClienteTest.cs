@@ -24,7 +24,7 @@ namespace Projeto.Presentation.Tests.Cenarios
             endpoint = "/api/cliente";
         }
 
-        [Fact] 
+        [Fact]
         public async Task Cliente_Post_ReturnsOkResponse()
         {
 
@@ -34,7 +34,7 @@ namespace Projeto.Presentation.Tests.Cenarios
                 Cpf = "00842426710",
                 Idade = 40,
                 DataNascimento = DateTime.Parse("1974/03/13", new CultureInfo("pt-BR"))
-        };
+            };
 
             var request = new StringContent(JsonConvert.SerializeObject(model),
                             Encoding.UTF8, "application/json");
@@ -44,12 +44,12 @@ namespace Projeto.Presentation.Tests.Cenarios
             response.StatusCode.Should().Be(HttpStatusCode.OK);
         }
 
-        [Fact] 
+        [Fact]
         public async Task Cliente_Put_ReturnsOkResponse()
         {
             var model = new ClienteEnderecoModel
             {
-                IdCliente=Guid.NewGuid(),
+                IdCliente = Guid.NewGuid(),
                 Nome = "Cliente Teste",
                 Cpf = "00842426710",
                 Idade = 40,
@@ -61,7 +61,7 @@ namespace Projeto.Presentation.Tests.Cenarios
 
             var response = await testContext.Client.PutAsync(endpoint, request);
 
-             response.StatusCode.Should().Be(HttpStatusCode.OK);
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
         }
 
         [Fact]

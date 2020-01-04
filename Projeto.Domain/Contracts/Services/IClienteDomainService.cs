@@ -6,7 +6,9 @@ using System.Text;
 namespace Projeto.Domain.Contracts.Services
 {
     public interface IClienteDomainService
-        :IBaseDomainService<Cliente>
+        : IBaseDomainService<Cliente>
     {
+        Cliente SelectByCpf(string cpf);
+        Cliente SelectByNome(string nome);
     }
 }
