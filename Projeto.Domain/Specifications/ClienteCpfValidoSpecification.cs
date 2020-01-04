@@ -8,9 +8,9 @@ namespace Projeto.Domain.Specifications
 {
     public class ClienteCpfValidoSpecification 
     {
-        public bool IsSatisfiedBy(Cliente cliente)
+        public bool IsSatisfiedBy(string cpf)
         {
-            return CPFValidation.Validar(cliente.Cpf);
+            return CPFValidation.Validar(cpf);
         }
     }
 }

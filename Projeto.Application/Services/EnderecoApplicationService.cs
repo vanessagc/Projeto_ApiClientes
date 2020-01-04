@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using Projeto.Application.Contracts;
 using Projeto.Application.Models;
 using Projeto.Domain.Contracts.Services;
@@ -12,18 +13,25 @@ namespace Projeto.Application.Services
     {
         private readonly IEnderecoDomainService _domainService;
         private readonly IMapper _mapper;
+        private readonly AbstractValidator<Endereco> _validator;
 
-        public EnderecoApplicationService(IEnderecoDomainService domainService, IMapper mapper)
+        public EnderecoApplicationService(IEnderecoDomainService domainService, IMapper mapper, AbstractValidator<Endereco> validator)
         {
             this._domainService = domainService;
             this._mapper = mapper;
+            this._validator = validator;
         }
         public EnderecoModel Create(EnderecoModel model)
         {
             var endereco = _mapper.Map<Endereco>(model);
 
-            var enderecoRetorno = _domainService.Create(endereco);
-            model = _mapper.Map<EnderecoModel>(enderecoRetorno);
+            var result = _validator.Validate(endereco, ruleSet: "all");
+
+            if (result.IsValid)
+            {
+                var enderecoRetorno = _domainService.Create(endereco);
+                model = _mapper.Map<EnderecoModel>(enderecoRetorno);
+            }
 
             return model;
         }
@@ -55,9 +63,14 @@ namespace Projeto.Application.Services
         public EnderecoModel Update(EnderecoModel model)
         {
             var endereco = _mapper.Map<Endereco>(model);
-            _domainService.Update(endereco);
-            model = _mapper.Map<EnderecoModel>(endereco);
 
+            var result = _validator.Validate(endereco, ruleSet: "all");
+
+            if (result.IsValid)
+            {
+                _domainService.Update(endereco);
+                model = _mapper.Map<EnderecoModel>(endereco);
+            }
             return model;
         }
 

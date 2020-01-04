@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using Projeto.Application.Contracts;
 using Projeto.Application.Models;
 using Projeto.Domain.Contracts.Services;
 using Projeto.Domain.Entities;
+using Projeto.Domain.Validations;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Projeto.Application.Services
 {
@@ -12,28 +15,26 @@ namespace Projeto.Application.Services
     {
         private readonly IClienteDomainService _domainService;
         private readonly IMapper _mapper;
+        private readonly AbstractValidator<Cliente> _validator;
 
-        public ClienteApplicationService(IClienteDomainService domainService, IMapper mapper)
+        public ClienteApplicationService(IClienteDomainService domainService, IMapper mapper, AbstractValidator<Cliente> validator)
         {
             this._domainService = domainService;
             this._mapper = mapper;
+            this._validator = validator;
 
         }
         public ClienteModel Create(ClienteModel model)
         {
             var cliente = _mapper.Map<Cliente>(model);
 
-            //if (!cliente.ValidationResult.IsValid)
-            //{
+            var result = _validator.Validate(cliente, ruleSet: "all");
+
+            if (result.IsValid)
+            {
                 var clienteRetorno = _domainService.Create(cliente);
                 model = _mapper.Map<ClienteModel>(clienteRetorno);
-
-            //} 
-            //else
-            //{
-            //    cliente.ValidationResult.Message = "CPF inválido!";
-            //    model = _mapper.Map<ClienteModel>(cliente);
-            //}
+            }
 
             return model;
 
@@ -81,8 +82,13 @@ namespace Projeto.Application.Services
         {
             var cliente = _mapper.Map<Cliente>(model);
 
-            var clienteRetorno = _domainService.Update(cliente);
-            model = _mapper.Map<ClienteModel>(clienteRetorno);
+            var result = _validator.Validate(cliente, ruleSet: "all");
+
+            if (result.IsValid)
+            {
+                var clienteRetorno = _domainService.Update(cliente);
+                model = _mapper.Map<ClienteModel>(clienteRetorno);
+            }
 
             return model;
         }

@@ -13,4 +13,3 @@ C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\obj\Debug\netcorea
 C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.AssemblyInfo.cs
 C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.dll
 C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.pdb
-C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.csprojAssemblyReference.cache

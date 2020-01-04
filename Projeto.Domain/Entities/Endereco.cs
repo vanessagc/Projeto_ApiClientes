@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FluentValidation.Results;
+using Projeto.Domain.Validations;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -23,5 +25,7 @@ namespace Projeto.Domain.Entities
         public Guid IdCliente { get; set; }
 
         public virtual Cliente Cliente { get; set; }
+
+
     }
 }
