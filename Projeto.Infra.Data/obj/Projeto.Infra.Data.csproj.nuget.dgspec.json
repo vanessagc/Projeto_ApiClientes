@@ -1,33 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Infra.Data\\Projeto.Infra.Data.csproj": {}
+    "C:\\Users\\Vanessa\\Documents\\Projeto_ApiClientes\\Projeto.Infra.Data\\Projeto.Infra.Data.csproj": {}
   },
   "projects": {
-    "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj": {
+    "C:\\Users\\Vanessa\\Documents\\Projeto_ApiClientes\\Projeto.Domain\\Projeto.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Vanessa\\Documents\\Projeto_ApiClientes\\Projeto.Domain\\Projeto.Domain.csproj",
         "projectName": "Projeto.Domain",
-        "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj",
-        "packagesPath": "C:\\Users\\iblue.vcarvalho\\.nuget\\packages\\",
-        "outputPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Vanessa\\Documents\\Projeto_ApiClientes\\Projeto.Domain\\Projeto.Domain.csproj",
+        "packagesPath": "C:\\Users\\Vanessa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vanessa\\Documents\\Projeto_ApiClientes\\Projeto.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\iblue.vcarvalho\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Vanessa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://mongeral.pkgs.visualstudio.com/_packaging/Nuget-Mongeral@Local/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/mongeral/_packaging/MongeralGAC/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
@@ -59,43 +59,49 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Infra.Data\\Projeto.Infra.Data.csproj": {
+    "C:\\Users\\Vanessa\\Documents\\Projeto_ApiClientes\\Projeto.Infra.Data\\Projeto.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Infra.Data\\Projeto.Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Vanessa\\Documents\\Projeto_ApiClientes\\Projeto.Infra.Data\\Projeto.Infra.Data.csproj",
         "projectName": "Projeto.Infra.Data",
-        "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Infra.Data\\Projeto.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\iblue.vcarvalho\\.nuget\\packages\\",
-        "outputPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Infra.Data\\obj\\",
+        "projectPath": "C:\\Users\\Vanessa\\Documents\\Projeto_ApiClientes\\Projeto.Infra.Data\\Projeto.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\Vanessa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vanessa\\Documents\\Projeto_ApiClientes\\Projeto.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\iblue.vcarvalho\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Vanessa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://mongeral.pkgs.visualstudio.com/_packaging/Nuget-Mongeral@Local/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/mongeral/_packaging/MongeralGAC/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj": {
-                "projectPath": "C:\\Vanessa\\desafio\\ApiClientes_projeto\\Projeto.Domain\\Projeto.Domain.csproj"
+              "C:\\Users\\Vanessa\\Documents\\Projeto_ApiClientes\\Projeto.Domain\\Projeto.Domain.csproj": {
+                "projectPath": "C:\\Users\\Vanessa\\Documents\\Projeto_ApiClientes\\Projeto.Domain\\Projeto.Domain.csproj"
               }
             }
           }
@@ -139,10 +145,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
