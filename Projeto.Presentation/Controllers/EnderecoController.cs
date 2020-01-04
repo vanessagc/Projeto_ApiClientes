@@ -9,11 +9,11 @@ namespace Projeto.Presentation.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ClienteController : ControllerBase
+    public class EnderecoController : ControllerBase
     {
 
         [HttpPost]
-        public IActionResult Post([FromServices]IClienteApplicationService service, ClienteModel model)
+        public IActionResult Post([FromServices]IEnderecoApplicationService service, EnderecoModel model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelStateValidaton.GetErrors(ModelState));
@@ -28,7 +28,7 @@ namespace Projeto.Presentation.Api.Controllers
             }
         }
         [HttpPut]
-        public IActionResult Put([FromServices]IClienteApplicationService service, ClienteModel model)
+        public IActionResult Put([FromServices]IEnderecoApplicationService service, EnderecoModel model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelStateValidaton.GetErrors(ModelState));
@@ -44,7 +44,7 @@ namespace Projeto.Presentation.Api.Controllers
         }
 
         [HttpDelete]
-        public IActionResult Delete([FromServices]IClienteApplicationService service, ClienteModel model)
+        public IActionResult Delete([FromServices]IEnderecoApplicationService service, EnderecoModel model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelStateValidaton.GetErrors(ModelState));
@@ -60,7 +60,7 @@ namespace Projeto.Presentation.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get([FromServices]IClienteApplicationService service)
+        public IActionResult Get([FromServices]IEnderecoApplicationService service)
         {
             try
             {
@@ -73,15 +73,16 @@ namespace Projeto.Presentation.Api.Controllers
         }
 
 
-        [HttpGet("id")]
-        public IActionResult Get([FromServices]IClienteApplicationService service, Guid id)
+        [HttpGet("{idEndereco}")]
+        public IActionResult Get([FromServices]IEnderecoApplicationService service, Guid idEndereco)
         {
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelStateValidaton.GetErrors(ModelState));
             try
             {
-                return Ok(service.SelectById(id));
+                service.SelectById(idEndereco);
+                return Ok();
             }
             catch (Exception e)
             {
@@ -89,36 +90,6 @@ namespace Projeto.Presentation.Api.Controllers
             }
         }
 
-        [HttpGet("cpf")]
-        public IActionResult GetByCpf([FromServices]IClienteApplicationService service, string cpf)
-        {
-
-            if (!ModelState.IsValid)
-                return BadRequest(ModelStateValidaton.GetErrors(ModelState));
-            try
-            {
-                return Ok(service.SelectByCpf(cpf));
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
-        }
-
-        [HttpGet("nome")]
-        public IActionResult Get([FromServices]IClienteApplicationService service, string nome)
-        {
-
-            if (!ModelState.IsValid)
-                return BadRequest(ModelStateValidaton.GetErrors(ModelState));
-            try
-            {
-                return Ok(service.SelectByNome(nome));
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
-        }
+      
     }
 }

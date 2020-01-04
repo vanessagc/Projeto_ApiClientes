@@ -11,10 +11,10 @@ namespace Projeto.Application.Mappings
     {
         public ViewModelToEntityMap()
         {
-            CreateMap<ClienteModel,Cliente>();
-            CreateMap<ClienteEnderecoModel,Cliente>();
-            CreateMap<EnderecoModel,Endereco>();
-            CreateMap<ClienteEnderecoModel,Endereco>();
+            CreateMap<ClienteModel, Cliente>();
+
+            CreateMap<EnderecoModel, Endereco>();
+
 
         }
 

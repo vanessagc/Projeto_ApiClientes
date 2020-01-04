@@ -6,12 +6,12 @@ namespace Projeto.Application.Contracts
 {
     public interface IClienteApplicationService: IDisposable
     {
-        ClienteEnderecoModel Create(ClienteEnderecoModel model);
-        ClienteEnderecoModel Update(ClienteEnderecoModel model);
-        void Remove(ClienteEnderecoModel model);
-        IEnumerable<ClienteEnderecoModel> SelectAll();
-        ClienteEnderecoModel SelectById(Guid id);
-        ClienteEnderecoModel SelectByCpf(string Cpf);
-        ClienteEnderecoModel SelectByNome(string nome);
+        ClienteModel Create(ClienteModel model);
+        ClienteModel Update(ClienteModel model);
+        void Remove(ClienteModel model);
+        IEnumerable<ClienteModel> SelectAll();
+        ClienteModel SelectById(Guid id);
+        ClienteModel SelectByCpf(string Cpf);
+        ClienteModel SelectByNome(string nome);
     }
 }

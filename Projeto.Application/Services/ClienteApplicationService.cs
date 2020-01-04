@@ -11,37 +11,28 @@ namespace Projeto.Application.Services
     public class ClienteApplicationService : IClienteApplicationService
     {
         private readonly IClienteDomainService _domainService;
-        private readonly IEnderecoDomainService _domainEnderecoService;
         private readonly IMapper _mapper;
 
-        public ClienteApplicationService(IClienteDomainService domainService, IEnderecoDomainService domainEnderecoService, IMapper mapper)
+        public ClienteApplicationService(IClienteDomainService domainService, IMapper mapper)
         {
             this._domainService = domainService;
-            this._domainEnderecoService = domainEnderecoService;
             this._mapper = mapper;
 
         }
-        public ClienteEnderecoModel Create(ClienteEnderecoModel model)
+        public ClienteModel Create(ClienteModel model)
         {
             var cliente = _mapper.Map<Cliente>(model);
-            cliente.Enderecos = _mapper.Map<IEnumerable<Endereco>>(model);
 
             //if (!cliente.ValidationResult.IsValid)
-            {
+            //{
                 var clienteRetorno = _domainService.Create(cliente);
-                model = _mapper.Map<ClienteEnderecoModel>(clienteRetorno);
+                model = _mapper.Map<ClienteModel>(clienteRetorno);
 
-                foreach(Endereco endereco in cliente.Enderecos)
-                {
-                    var enderecoRetorno = _domainEnderecoService.Create(endereco);
-                    model = _mapper.Map<ClienteEnderecoModel>(enderecoRetorno);
-                }
-
-            } 
+            //} 
             //else
             //{
             //    cliente.ValidationResult.Message = "CPF inválido!";
-            //    model = _mapper.Map<ClienteEnderecoModel>(cliente);
+            //    model = _mapper.Map<ClienteModel>(cliente);
             //}
 
             return model;
@@ -53,58 +44,45 @@ namespace Projeto.Application.Services
             _domainService.Dispose();
         }
 
-        public void Remove(ClienteEnderecoModel model)
+        public void Remove(ClienteModel model)
         {
             var cliente = _mapper.Map<Cliente>(model);
-            cliente.Enderecos = _mapper.Map<IEnumerable<Endereco>>(model);
 
             cliente = _domainService.SelectById(cliente.IdCliente);
-
-            foreach(Endereco endereco in cliente.Enderecos)
-            {
-                _domainEnderecoService.Remove(endereco);
-            }
 
             _domainService.Remove(cliente);
         }
 
-        public IEnumerable<ClienteEnderecoModel> SelectAll()
+        public IEnumerable<ClienteModel> SelectAll()
         {
-            var model = _mapper.Map<IEnumerable<ClienteEnderecoModel>>(_domainService.SelectAll());
+            var model = _mapper.Map<IEnumerable<ClienteModel>>(_domainService.SelectAll());
             return model;
         }
 
-        public ClienteEnderecoModel SelectByCpf(string Cpf)
+        public ClienteModel SelectByCpf(string Cpf)
         {
-            var model = _mapper.Map<ClienteEnderecoModel>(_domainService.SelectByCpf(Cpf));
+            var model = _mapper.Map<ClienteModel>(_domainService.SelectByCpf(Cpf));
             return model;
         }
 
-        public ClienteEnderecoModel SelectById(Guid id)
+        public ClienteModel SelectById(Guid id)
         {
-            var model = _mapper.Map<ClienteEnderecoModel>(_domainService.SelectById(id));
+            var model = _mapper.Map<ClienteModel>(_domainService.SelectById(id));
             return model;
         }
 
-        public ClienteEnderecoModel SelectByNome(string nome)
+        public ClienteModel SelectByNome(string nome)
         {
-            var model = _mapper.Map<ClienteEnderecoModel>(_domainService.SelectByNome(nome));
+            var model = _mapper.Map<ClienteModel>(_domainService.SelectByNome(nome));
             return model;
         }
 
-        public ClienteEnderecoModel Update(ClienteEnderecoModel model)
+        public ClienteModel Update(ClienteModel model)
         {
             var cliente = _mapper.Map<Cliente>(model);
-            cliente.Enderecos = _mapper.Map<IEnumerable<Endereco>>(model);
 
             var clienteRetorno = _domainService.Update(cliente);
-            model = _mapper.Map<ClienteEnderecoModel>(clienteRetorno);
-
-            foreach (Endereco endereco in cliente.Enderecos)
-            {
-                var enderecoRetorno = _domainEnderecoService.Update(endereco);
-                model = _mapper.Map<ClienteEnderecoModel>(enderecoRetorno);
-            }
+            model = _mapper.Map<ClienteModel>(clienteRetorno);
 
             return model;
         }
