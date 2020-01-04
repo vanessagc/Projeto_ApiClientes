@@ -3,5 +3,15 @@
 ################################################################################
 
 /.vs
-bin
 /Projeto.Application/obj
+/Projeto.Application/bin
+/Projeto.Domain/obj
+/Projeto.Domain/bin
+/Projeto.Infra.Data/obj
+/Projeto.Infra.Data/bin
+/Projeto.Presentation/obj
+/Projeto.Presentation/bin
+/Projeto.Presentation.Api.Tests/obj
+/Projeto.Presentation.Api.Tests/bin
+/Projeto.Presentation/App_data/BDApiCliente.mdf
+/Projeto.Presentation/App_data/BDApiCliente.ldf

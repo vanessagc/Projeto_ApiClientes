@@ -1,5 +1,4 @@
-﻿using DomainValidation.Validation;
-using Projeto.Domain.Entities;
+﻿using Projeto.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;

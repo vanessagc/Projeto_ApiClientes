@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "DomainValidation/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net453/DomainValidation.dll": {}
-        },
-        "runtime": {
-          "lib/net453/DomainValidation.dll": {}
-        }
-      },
       "FluentValidation/8.6.1": {
         "type": "package",
         "dependencies": {
@@ -2509,22 +2500,6 @@
     }
   },
   "libraries": {
-    "DomainValidation/1.0.0": {
-      "sha512": "u6NxTpdHj2pCA0Kh9FfgJh9XZJA6NsEKu/kvjzRLT3Exn+ik88UOZOWNsczt8rXZFgZ50dzUZ0Vq2tHXtJR/mQ==",
-      "type": "package",
-      "path": "domainvalidation/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "DomainValidation.1.0.0.nupkg.sha512",
-        "DomainValidation.nuspec",
-        "lib/net35/DomainValidation.dll",
-        "lib/net40/DomainValidation.dll",
-        "lib/net45/DomainValidation.dll",
-        "lib/net451/DomainValidation.dll",
-        "lib/net453/DomainValidation.dll"
-      ]
-    },
     "FluentValidation/8.6.1": {
       "sha512": "g0xw/YCVgJ1IYpBgKF9iuci/Arf6Dsq9H/WeeT9zaBpjrEA+Cr2GjWXHu1F0DKqVzp4J4hta4gGrRt6H4aESqQ==",
       "type": "package",
@@ -7693,7 +7668,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "DomainValidation >= 1.0.0",
       "FluentValidation.AspNetCore >= 8.6.1",
       "Microsoft.NETCore.App >= 2.2.0"
     ]
@@ -7742,10 +7716,6 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
-          "DomainValidation": {
-            "target": "Package",
-            "version": "[1.0.0, )"
-          },
           "FluentValidation.AspNetCore": {
             "target": "Package",
             "version": "[8.6.1, )"
@@ -7770,17 +7740,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "O pacote 'DomainValidation 1.0.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v2.2'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
-      "libraryId": "DomainValidation",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    }
-  ]
+  }
 }

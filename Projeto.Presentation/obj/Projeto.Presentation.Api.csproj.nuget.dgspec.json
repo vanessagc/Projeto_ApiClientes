@@ -115,10 +115,6 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
-            "DomainValidation": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[8.6.1, )"

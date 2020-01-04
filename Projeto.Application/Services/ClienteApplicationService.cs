@@ -26,7 +26,7 @@ namespace Projeto.Application.Services
             var cliente = _mapper.Map<Cliente>(model);
             cliente.Enderecos = _mapper.Map<IEnumerable<Endereco>>(model);
 
-            if (!cliente.ValidationResult.IsValid)
+            //if (!cliente.ValidationResult.IsValid)
             {
                 var clienteRetorno = _domainService.Create(cliente);
                 model = _mapper.Map<ClienteEnderecoModel>(clienteRetorno);
@@ -37,11 +37,12 @@ namespace Projeto.Application.Services
                     model = _mapper.Map<ClienteEnderecoModel>(enderecoRetorno);
                 }
 
-            } else
-            {
-                cliente.ValidationResult.Message = "CPF inválido!";
-                model = _mapper.Map<ClienteEnderecoModel>(cliente);
-            }
+            } 
+            //else
+            //{
+            //    cliente.ValidationResult.Message = "CPF inválido!";
+            //    model = _mapper.Map<ClienteEnderecoModel>(cliente);
+            //}
 
             return model;
 

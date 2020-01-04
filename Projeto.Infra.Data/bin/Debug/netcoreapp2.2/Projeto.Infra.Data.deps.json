@@ -19,14 +19,6 @@
           "Projeto.Infra.Data.dll": {}
         }
       },
-      "DomainValidation/1.0.0": {
-        "runtime": {
-          "lib/net453/DomainValidation.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "FluentValidation/8.6.1": {
         "dependencies": {
           "System.ComponentModel.Annotations": "4.5.0"
@@ -1779,7 +1771,6 @@
       },
       "Projeto.Domain/1.0.0": {
         "dependencies": {
-          "DomainValidation": "1.0.0",
           "FluentValidation.AspNetCore": "8.6.1"
         },
         "runtime": {
@@ -1793,13 +1784,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "DomainValidation/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-u6NxTpdHj2pCA0Kh9FfgJh9XZJA6NsEKu/kvjzRLT3Exn+ik88UOZOWNsczt8rXZFgZ50dzUZ0Vq2tHXtJR/mQ==",
-      "path": "domainvalidation/1.0.0",
-      "hashPath": "domainvalidation.1.0.0.nupkg.sha512"
     },
     "FluentValidation/8.6.1": {
       "type": "package",

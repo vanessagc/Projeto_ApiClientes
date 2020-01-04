@@ -11,9 +11,7 @@ namespace Projeto.Infra.Data.Context
     {
         public DataContext CreateDbContext(string[] args)
         {
-            var connectionString = @"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BDApiCliente;
-                                        Integrated Security=True;Connect Timeout=30;Encrypt=False;
-                                        TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            var connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BDApiCliente;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             var builder = new DbContextOptionsBuilder<DataContext>();
             builder.UseSqlServer(connectionString);
             return new DataContext(builder.Options);
