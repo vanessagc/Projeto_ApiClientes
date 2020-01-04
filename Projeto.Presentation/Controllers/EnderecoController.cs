@@ -73,15 +73,15 @@ namespace Projeto.Presentation.Api.Controllers
         }
 
 
-        [HttpGet("{idEndereco}")]
-        public IActionResult Get([FromServices]IEnderecoApplicationService service, Guid idEndereco)
+        [HttpGet("id")]
+        public IActionResult Get([FromServices]IEnderecoApplicationService service, Guid id)
         {
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelStateValidaton.GetErrors(ModelState));
             try
             {
-                service.SelectById(idEndereco);
+                service.SelectById(id);
                 return Ok();
             }
             catch (Exception e)
