@@ -8,7 +8,7 @@ namespace Projeto.Application.Contracts
     {
         ClienteEnderecoModel Create(ClienteEnderecoModel model);
         ClienteEnderecoModel Update(ClienteEnderecoModel model);
-        void Remove(Guid id);
+        void Remove(ClienteEnderecoModel model);
         IEnumerable<ClienteEnderecoModel> SelectAll();
         ClienteEnderecoModel SelectById(Guid id);
         ClienteEnderecoModel SelectByCpf(string Cpf);

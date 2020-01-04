@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using JetBrains.Annotations;
+using Microsoft.EntityFrameworkCore;
 using Projeto.Domain.Entities;
 using Projeto.Infra.Data.Mappings;
 using System;
@@ -9,6 +10,10 @@ namespace Projeto.Infra.Data.Context
 {
     public class DataContext: DbContext
     {
+        public DataContext(DbContextOptions options) : base(options)
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //adicionar as classes de mapeamento

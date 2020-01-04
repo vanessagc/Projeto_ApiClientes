@@ -52,17 +52,19 @@ namespace Projeto.Application.Services
             _domainService.Dispose();
         }
 
-        public void Remove(Guid id)
+        public void Remove(ClienteEnderecoModel model)
         {
+            var cliente = _mapper.Map<Cliente>(model);
+            cliente.Enderecos = _mapper.Map<IEnumerable<Endereco>>(model);
 
-            var cliente = _domainService.SelectById(id);
+            cliente = _domainService.SelectById(cliente.IdCliente);
 
             foreach(Endereco endereco in cliente.Enderecos)
             {
-                _domainEnderecoService.Remove(endereco.IdEndereco);
+                _domainEnderecoService.Remove(endereco);
             }
 
-            _domainService.Remove(id);
+            _domainService.Remove(cliente);
         }
 
         public IEnumerable<ClienteEnderecoModel> SelectAll()

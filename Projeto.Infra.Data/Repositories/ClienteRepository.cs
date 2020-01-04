@@ -1,5 +1,7 @@
-﻿using Projeto.Infra.Data.Contracts;
-using Projeto.Infra.Data.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Projeto.Domain.Contracts.Repositories;
+using Projeto.Domain.Entities;
+using Projeto.Infra.Data.Context;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -8,48 +10,41 @@ using System.Text;
 
 namespace Projeto.Infra.Data.Repositories
 {
-    public class ClienteRepository : IClienteRepository
+    public class ClienteRepository : BaseRepository<Cliente>, IClienteRepository
     {
-        private ConcurrentDictionary<Guid, Cliente> context;
 
-        public ClienteRepository(ConcurrentDictionary<Guid, Cliente> context)
+        private readonly DataContext dataContext;
+        public ClienteRepository(DataContext dataContext)
+        : base(dataContext)
         {
-            this.context = context;
-        }
-        public Cliente Create(Cliente obj)
-        {
-            context[obj.IdCliente] = obj;
-
-            return obj;
+            this.dataContext = dataContext;
         }
 
-        public Cliente Remove(Guid id)
+        public override IEnumerable<Cliente> SelectAll()
         {
-            var cliente = new Cliente();
-            context.Remove(id, out cliente);
+            return dataContext.Cliente.Include(f => f.Enderecos).ToList();
+        }
+        public override IEnumerable<Cliente> SelectAll(Func<Cliente, bool> where)
+        {
+            return dataContext.Cliente.Include
 
-            return cliente;
+            (f => f.Enderecos).Where(where);
+
         }
 
-        public IEnumerable<Cliente> SelectAll()
+        public Cliente SelectByCpf(string cpf)
         {
-            return context.Values
-                    .OrderBy(p => p.Nome)
-                    .ToList();
+            return dataContext.Cliente.Include(f => f.Enderecos)
+            .SingleOrDefault(f => f.Cpf.Equals(cpf));
         }
 
-        public Cliente SelectById(Guid id)
+        public Cliente SelectByNome(string nome)
         {
-            return context.Values
-                    .SingleOrDefault(p => p.IdCliente.Equals(id));
+            return dataContext.Cliente.Include(f => f.Enderecos)
+            .SingleOrDefault(f => f.Nome.Equals(nome));
         }
 
-        public Cliente Update(Cliente obj)
-        {
-            if(context[obj.IdCliente] != null)
-                context[obj.IdCliente] = obj;
 
-            return obj;
-        }
+
     }
 }

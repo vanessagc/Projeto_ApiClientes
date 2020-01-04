@@ -25,9 +25,9 @@ namespace Projeto.Domain.Services
             repository.Dispose();
         }
 
-        public virtual TEntity Remove(Guid id)
+        public virtual void Remove(TEntity obj)
         {
-            return repository.Remove(id);
+            repository.Remove(obj);
         }
 
         public virtual IEnumerable<TEntity> SelectAll()

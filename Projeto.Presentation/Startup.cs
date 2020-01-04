@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -15,10 +16,10 @@ using Microsoft.Extensions.Options;
 using Projeto.Application.Contracts;
 using Projeto.Application.Models;
 using Projeto.Application.Services;
+using Projeto.Domain.Contracts.Repositories;
 using Projeto.Domain.Contracts.Services;
 using Projeto.Domain.Services;
-using Projeto.Infra.Data.Contracts;
-using Projeto.Infra.Data.Entities;
+using Projeto.Infra.Data.Context;
 using Projeto.Infra.Data.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -40,14 +41,24 @@ namespace Projeto.Presentation.Api
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddSingleton<IClienteDomainService, ClienteDomainService>();
-            services.AddSingleton<IEnderecoDomainService, EnderecoDomainService>();
+            services.AddTransient<IClienteDomainService, ClienteDomainService>();
+            services.AddTransient<IEnderecoDomainService, EnderecoDomainService>();
 
-            services.AddSingleton<IClienteApplicationService, ClienteApplicationService>();
-            services.AddSingleton<IEnderecoApplicationService, EnderecoApplicationService>();
+            services.AddTransient<IClienteApplicationService, ClienteApplicationService>();
+            services.AddTransient<IEnderecoApplicationService, EnderecoApplicationService>();
 
-            services.AddSingleton<IClienteRepository, ClienteRepository>();
-            services.AddSingleton<IEnderecoRepository, EnderecoRepository>();
+            services.AddTransient<IClienteRepository, ClienteRepository>();
+            services.AddTransient<IEnderecoRepository, EnderecoRepository>();
+
+            #region Configuração do EntityFramework
+
+            services.AddTransient<DataContext>();
+            services.AddDbContext<DataContext>(
+                options => options.UseSqlServer(Configuration.GetConnectionString("BD"))
+                );
+
+
+            #endregion
 
             #region Configuração do Swagger
 

@@ -43,13 +43,13 @@ namespace Projeto.Presentation.Api.Controllers
         }
 
         [HttpDelete("{idCliente}")]
-        public IActionResult Delete([FromServices]IClienteApplicationService service, Guid idCliente)
+        public IActionResult Delete([FromServices]IClienteApplicationService service, ClienteEnderecoModel model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelStateValidaton.GetErrors(ModelState));
             try
             {
-                service.Remove(idCliente);
+                service.Remove(model);
                 return Ok();
             }
             catch (Exception e)

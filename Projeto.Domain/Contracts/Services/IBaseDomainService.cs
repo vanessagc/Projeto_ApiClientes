@@ -9,7 +9,7 @@ namespace Projeto.Domain.Contracts.Services
     {
         TEntity Create(TEntity obj);
         TEntity Update(TEntity obj);
-        TEntity Remove(Guid id);
+        void Remove(TEntity obj);
 
         IEnumerable<TEntity> SelectAll();
         TEntity SelectById(Guid id);

@@ -4,15 +4,14 @@ using System.Text;
 
 namespace Projeto.Domain.Contracts.Repositories
 {
-    public interface IBaseRepository<TEntity>
+    public interface IBaseRepository<TEntity> : IDisposable
         where TEntity : class
     {
         TEntity Create(TEntity obj);
         TEntity Update(TEntity obj);
-        TEntity Remove(Guid id);
+        void Remove(TEntity obj);
 
         IEnumerable<TEntity> SelectAll();
         TEntity SelectById(Guid id);
-        void Dispose();
     }
 }
