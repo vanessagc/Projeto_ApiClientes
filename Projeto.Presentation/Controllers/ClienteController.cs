@@ -11,6 +11,7 @@ namespace Projeto.Presentation.Api.Controllers
     [ApiController]
     public class ClienteController : ControllerBase
     {
+
         [HttpPost]
         public IActionResult Post([FromServices]IClienteApplicationService service, ClienteEnderecoModel model)
         {
