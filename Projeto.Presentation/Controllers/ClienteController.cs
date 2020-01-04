@@ -89,7 +89,8 @@ namespace Projeto.Presentation.Api.Controllers
             }
         }
 
-        [HttpGet("cpf")]
+        [HttpGet]
+        [Route("{cpf}")]
         public IActionResult GetByCpf([FromServices]IClienteApplicationService service, string cpf)
         {
 
@@ -105,7 +106,8 @@ namespace Projeto.Presentation.Api.Controllers
             }
         }
 
-        [HttpGet("nome")]
+        [HttpGet]
+        [Route("{nome}")]
         public IActionResult Get([FromServices]IClienteApplicationService service, string nome)
         {
 
