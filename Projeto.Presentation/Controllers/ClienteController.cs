@@ -89,8 +89,7 @@ namespace Projeto.Presentation.Api.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("{cpf}")]
+        [HttpGet("cpf")]
         public IActionResult GetByCpf([FromServices]IClienteApplicationService service, string cpf)
         {
 
@@ -106,21 +105,5 @@ namespace Projeto.Presentation.Api.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("{nome}")]
-        public IActionResult Get([FromServices]IClienteApplicationService service, string nome)
-        {
-
-            if (!ModelState.IsValid)
-                return BadRequest(ModelStateValidaton.GetErrors(ModelState));
-            try
-            {
-                return Ok(service.SelectByNome(nome));
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, e.Message);
-            }
-        }
     }
 }

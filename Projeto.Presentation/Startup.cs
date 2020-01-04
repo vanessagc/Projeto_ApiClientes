@@ -19,6 +19,7 @@ using Projeto.Application.Services;
 using Projeto.Domain.Contracts.Repositories;
 using Projeto.Domain.Contracts.Services;
 using Projeto.Domain.Services;
+using Projeto.Domain.Validations;
 using Projeto.Infra.Data.Context;
 using Projeto.Infra.Data.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
@@ -49,6 +50,9 @@ namespace Projeto.Presentation.Api
 
             services.AddTransient<IClienteRepository, ClienteRepository>();
             services.AddTransient<IEnderecoRepository, EnderecoRepository>();
+
+            services.AddTransient<ClienteEhValido>();
+            services.AddTransient<EnderecoEhValido>();
 
             #region Configuração do EntityFramework
 

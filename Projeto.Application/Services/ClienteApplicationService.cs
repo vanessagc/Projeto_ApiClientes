@@ -15,9 +15,9 @@ namespace Projeto.Application.Services
     {
         private readonly IClienteDomainService _domainService;
         private readonly IMapper _mapper;
-        private readonly AbstractValidator<Cliente> _validator;
+        private readonly ClienteEhValido _validator;
 
-        public ClienteApplicationService(IClienteDomainService domainService, IMapper mapper, AbstractValidator<Cliente> validator)
+        public ClienteApplicationService(IClienteDomainService domainService, IMapper mapper, ClienteEhValido validator)
         {
             this._domainService = domainService;
             this._mapper = mapper;

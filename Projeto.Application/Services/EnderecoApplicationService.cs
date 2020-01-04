@@ -4,6 +4,7 @@ using Projeto.Application.Contracts;
 using Projeto.Application.Models;
 using Projeto.Domain.Contracts.Services;
 using Projeto.Domain.Entities;
+using Projeto.Domain.Validations;
 using System;
 using System.Collections.Generic;
 
@@ -13,9 +14,9 @@ namespace Projeto.Application.Services
     {
         private readonly IEnderecoDomainService _domainService;
         private readonly IMapper _mapper;
-        private readonly AbstractValidator<Endereco> _validator;
+        private readonly EnderecoEhValido _validator;
 
-        public EnderecoApplicationService(IEnderecoDomainService domainService, IMapper mapper, AbstractValidator<Endereco> validator)
+        public EnderecoApplicationService(IEnderecoDomainService domainService, IMapper mapper, EnderecoEhValido validator)
         {
             this._domainService = domainService;
             this._mapper = mapper;
