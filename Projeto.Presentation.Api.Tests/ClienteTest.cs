@@ -22,71 +22,71 @@ namespace Projeto.Presentation.Api.Tests
             endpoint = "/api/cliente";
         }
 
-        //[Fact]
-        //public async Task Cliente_Post_ReturnsOkResponse()
-        //{
+        [Fact]
+        public async Task Cliente_Post_ReturnsOkResponse()
+        {
 
-        //    var model = new ClienteEnderecoModel
-        //    {
-        //        Nome = "Cliente Teste",
-        //        Cpf = "00842426710",
-        //        Idade = 40,
-        //        DataNascimento = DateTime.Parse("1974/03/13", new CultureInfo("pt-BR"))
-        //    };
+            var model = new ClienteModel
+            {
+                Nome = "Cliente Teste",
+                Cpf = "00842426710",
+                Idade = 40,
+                DataNascimento = DateTime.Parse("1974/03/13", new CultureInfo("pt-BR"))
+            };
 
-        //    var request = new StringContent(JsonConvert.SerializeObject(model),
-        //                    Encoding.UTF8, "application/json");
+            var request = new StringContent(JsonConvert.SerializeObject(model),
+                            Encoding.UTF8, "application/json");
 
-        //    var response = await testContext.Client.PostAsync(endpoint, request);
+            var response = await testContext.Client.PostAsync(endpoint, request);
 
-        //    response.StatusCode.Should().Be(HttpStatusCode.OK);
-        //}
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+        }
 
-        //[Fact]
-        //public async Task Cliente_Put_ReturnsOkResponse()
-        //{
-        //    var model = new ClienteEnderecoModel
-        //    {
-        //        IdCliente = Guid.NewGuid(),
-        //        Nome = "Cliente Teste",
-        //        Cpf = "00842426710",
-        //        Idade = 40,
-        //        DataNascimento = DateTime.Parse("1974/03/13", new CultureInfo("pt-BR"))
-        //    };
+        [Fact]
+        public async Task Cliente_Put_ReturnsOkResponse()
+        {
+            var model = new ClienteModel
+            {
+                IdCliente = Guid.NewGuid(),
+                Nome = "Cliente Teste",
+                Cpf = "00842426710",
+                Idade = 40,
+                DataNascimento = DateTime.Parse("1974/03/13", new CultureInfo("pt-BR"))
+            };
 
-        //    var request = new StringContent(JsonConvert.SerializeObject(model),
-        //                    Encoding.UTF8, "application/json");
+            var request = new StringContent(JsonConvert.SerializeObject(model),
+                            Encoding.UTF8, "application/json");
 
-        //    var response = await testContext.Client.PutAsync(endpoint, request);
+            var response = await testContext.Client.PutAsync(endpoint, request);
 
-        //    response.StatusCode.Should().Be(HttpStatusCode.OK);
-        //}
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+        }
 
-        //[Fact]
-        //public async Task Cliente_Delete_ReturnsOkResponse()
-        //{
-        //    var idCliente = Guid.NewGuid();
+        [Fact]
+        public async Task Cliente_Delete_ReturnsOkResponse()
+        {
+            var idCliente = Guid.NewGuid();
 
-        //    var response = await testContext.Client.DeleteAsync(endpoint + "/" + idCliente);
+            var response = await testContext.Client.DeleteAsync(endpoint + "/" + idCliente);
 
-        //    response.StatusCode.Should().Be(HttpStatusCode.OK);
-        //}
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+        }
 
-        //[Fact]
-        //public async Task Cliente_GetAll_ReturnsOkResponse()
-        //{
-        //    var response = await testContext.Client.GetAsync(endpoint);
-        //    response.StatusCode.Should().Be(HttpStatusCode.OK);
-        //}
+        [Fact]
+        public async Task Cliente_GetAll_ReturnsOkResponse()
+        {
+            var response = await testContext.Client.GetAsync(endpoint);
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+        }
 
-        //[Fact]
-        //public async Task Cliente_GetById_ReturnsOkResponse()
-        //{
-        //    var idCliente = Guid.NewGuid();
+        [Fact]
+        public async Task Cliente_GetById_ReturnsOkResponse()
+        {
+            var idCliente = Guid.NewGuid();
 
-        //    var response = await testContext.Client.GetAsync(endpoint + "/" + idCliente);
+            var response = await testContext.Client.GetAsync(endpoint + "/" + idCliente);
 
-        //    response.StatusCode.Should().Be(HttpStatusCode.OK);
-        //}
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+        }
     }
 }
