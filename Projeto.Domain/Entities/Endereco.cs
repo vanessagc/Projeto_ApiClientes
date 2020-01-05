@@ -26,6 +26,6 @@ namespace Projeto.Domain.Entities
 
         public virtual Cliente Cliente { get; set; }
 
-
+        public ValidationResult ValidationResult { get; set; }
     }
 }

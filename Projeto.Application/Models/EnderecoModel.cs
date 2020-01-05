@@ -30,5 +30,9 @@ namespace Projeto.Application.Models
 
         [ScaffoldColumn(false)]
         public Guid IdCliente { get; set; }
+
+        [ScaffoldColumn(false)]
+        public FluentValidation.Results.ValidationResult ValidationResult { get; set; }
+
     }
 }

@@ -1,8 +1,7 @@
-﻿using System;
+﻿using FluentValidation.Results;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Projeto.Application.Models
 {
@@ -33,6 +32,9 @@ namespace Projeto.Application.Models
         public DateTime DataNascimento { get; set; }
 
         public ICollection<EnderecoModel> Enderecos { get; set; }
+
+        [ScaffoldColumn(false)]
+        public FluentValidation.Results.ValidationResult ValidationResult { get; set; }
 
     }
 }

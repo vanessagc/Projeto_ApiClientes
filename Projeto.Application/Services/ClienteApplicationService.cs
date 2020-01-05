@@ -30,6 +30,9 @@ namespace Projeto.Application.Services
 
             var result = _validator.Validate(cliente, ruleSet: "all");
 
+            cliente.ValidationResult = result;
+            model = _mapper.Map<ClienteModel>(cliente);
+
             if (result.IsValid)
             {
                 var clienteRetorno = _domainService.Create(cliente);
@@ -77,6 +80,8 @@ namespace Projeto.Application.Services
             var cliente = _mapper.Map<Cliente>(model);
 
             var result = _validator.Validate(cliente, ruleSet: "all");
+
+            cliente.ValidationResult = result;
 
             if (result.IsValid)
             {

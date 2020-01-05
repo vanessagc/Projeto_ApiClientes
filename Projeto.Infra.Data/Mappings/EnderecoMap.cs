@@ -34,6 +34,7 @@ namespace Projeto.Infra.Data.Mappings
                 .HasColumnType("varchar(40)")
                 .HasMaxLength(40)
                 .IsRequired();
+            builder.Ignore(f => f.ValidationResult);
 
             builder.HasOne(d => d.Cliente)
                 .WithMany(f => f.Enderecos)

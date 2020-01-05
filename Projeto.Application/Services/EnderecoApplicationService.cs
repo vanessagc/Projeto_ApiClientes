@@ -28,6 +28,8 @@ namespace Projeto.Application.Services
 
             var result = _validator.Validate(endereco, ruleSet: "all");
 
+            endereco.ValidationResult = result;
+
             if (result.IsValid)
             {
                 var enderecoRetorno = _domainService.Create(endereco);
@@ -66,6 +68,8 @@ namespace Projeto.Application.Services
             var endereco = _mapper.Map<Endereco>(model);
 
             var result = _validator.Validate(endereco, ruleSet: "all");
+
+            endereco.ValidationResult = result;
 
             if (result.IsValid)
             {

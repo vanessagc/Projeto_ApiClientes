@@ -19,8 +19,7 @@ namespace Projeto.Presentation.Api.Controllers
                 return BadRequest(ModelStateValidaton.GetErrors(ModelState));
             try
             {
-                service.Create(model);
-                return Ok();
+                return Ok(service.Create(model));
             }
             catch(Exception e)
             {
@@ -34,8 +33,7 @@ namespace Projeto.Presentation.Api.Controllers
                 return BadRequest(ModelStateValidaton.GetErrors(ModelState));
             try
             {
-                service.Update(model);
-                return Ok();
+                return Ok(service.Update(model));
             }
             catch (Exception e)
             {

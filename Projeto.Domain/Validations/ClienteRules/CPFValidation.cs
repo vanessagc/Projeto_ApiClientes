@@ -4,7 +4,10 @@
     {
         public static bool Validar(string cpf)
         {
-            if (cpf.Length > 11)
+            if (!decimal.TryParse(cpf, out decimal d))
+                return false;
+
+                if (cpf.Length > 11)
                 return false;
 
             while (cpf.Length != 11)

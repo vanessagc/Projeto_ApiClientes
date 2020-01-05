@@ -32,6 +32,7 @@ namespace Projeto.Infra.Data.Mappings
                 .HasColumnName("DataNascimento")
                 .HasColumnType("date")
                 .IsRequired();
+            builder.Ignore(f => f.ValidationResult);
 
         }
     }

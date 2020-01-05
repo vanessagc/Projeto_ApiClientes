@@ -24,5 +24,7 @@ namespace Projeto.Domain.Entities
 
         public virtual IEnumerable<Endereco> Enderecos { get; set; }
 
+        public ValidationResult ValidationResult { get; set; }
+
     }
 }
