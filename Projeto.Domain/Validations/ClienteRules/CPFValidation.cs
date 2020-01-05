@@ -1,9 +1,4 @@
-﻿using Projeto.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Projeto.Domain.Validations
+﻿namespace Projeto.Domain.Validations.ClienteRules
 {
     public class CPFValidation
     {

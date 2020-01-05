@@ -1,9 +1,6 @@
 ﻿using FluentValidation;
 using Projeto.Domain.Entities;
 using Projeto.Domain.Specifications;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Projeto.Domain.Validations
 {
@@ -13,11 +10,13 @@ namespace Projeto.Domain.Validations
         {
 
             var CPFCliente = new ClienteCpfValidoSpecification();
+            var NomeCliente = new ClienteNomeValidoSpecification();
 
             RuleSet("all", () =>
             {
                 RuleFor(x => x.Cpf).Must(CPFCliente.IsSatisfiedBy).WithMessage("Cpf inválido");
                 RuleFor(x => x.Nome).NotNull().WithMessage("Nome obrigatório");
+                RuleFor(x => x.Nome).Must(NomeCliente.IsSatisfiedBy).WithMessage("Nome obrigatório");
                 RuleFor(x => x.DataNascimento).NotNull().WithMessage("Nascimento obrigatório");
             });
 

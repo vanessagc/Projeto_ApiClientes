@@ -12,6 +12,5 @@ namespace Projeto.Application.Contracts
         IEnumerable<ClienteModel> SelectAll();
         ClienteModel SelectById(Guid id);
         ClienteModel SelectByCpf(string Cpf);
-        ClienteModel SelectByNome(string nome);
     }
 }

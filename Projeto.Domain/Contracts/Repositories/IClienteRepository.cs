@@ -5,6 +5,5 @@ namespace Projeto.Domain.Contracts.Repositories
     public interface IClienteRepository : IBaseRepository<Cliente>
     {
         Cliente SelectByCpf(string cpf);
-        Cliente SelectByNome(string nome);
     }
 }

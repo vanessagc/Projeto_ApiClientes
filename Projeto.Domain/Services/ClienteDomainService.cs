@@ -23,9 +23,5 @@ namespace Projeto.Domain.Services
             return repository.SelectByCpf(cpf);
         }
 
-        public Cliente SelectByNome(string nome)
-        {
-            return repository.SelectByNome(nome);
-        }
     }
 }

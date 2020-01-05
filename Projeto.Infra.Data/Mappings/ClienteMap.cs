@@ -17,7 +17,7 @@ namespace Projeto.Infra.Data.Mappings
             builder.Property(f => f.Nome)
                 .HasColumnName("Nome")
                 .HasColumnType("varchar(30)")
-                .HasMaxLength(150)
+                .HasMaxLength(30)
                 .IsRequired();
             builder.Property(f => f.Cpf)
                 .HasColumnName("Cpf")

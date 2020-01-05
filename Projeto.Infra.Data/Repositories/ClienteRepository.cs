@@ -38,13 +38,5 @@ namespace Projeto.Infra.Data.Repositories
             .SingleOrDefault(f => f.Cpf.Equals(cpf));
         }
 
-        public Cliente SelectByNome(string nome)
-        {
-            return dataContext.Cliente.Include(f => f.Enderecos)
-            .SingleOrDefault(f => f.Nome.Equals(nome));
-        }
-
-
-
     }
 }

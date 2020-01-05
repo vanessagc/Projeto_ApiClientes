@@ -1,8 +1,4 @@
-﻿using Projeto.Domain.Entities;
-using Projeto.Domain.Validations;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Projeto.Domain.Validations.ClienteRules;
 
 namespace Projeto.Domain.Specifications
 {

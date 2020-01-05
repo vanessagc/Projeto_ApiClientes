@@ -72,12 +72,6 @@ namespace Projeto.Application.Services
             return model;
         }
 
-        public ClienteModel SelectByNome(string nome)
-        {
-            var model = _mapper.Map<ClienteModel>(_domainService.SelectByNome(nome));
-            return model;
-        }
-
         public ClienteModel Update(ClienteModel model)
         {
             var cliente = _mapper.Map<Cliente>(model);

@@ -9,8 +9,8 @@ C:\Vanessa\desafio\ApiClientes_projeto\Projeto.Domain\obj\Debug\netcoreapp2.2\Pr
 C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\bin\Debug\netcoreapp2.2\Projeto.Domain.deps.json
 C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\bin\Debug\netcoreapp2.2\Projeto.Domain.dll
 C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\bin\Debug\netcoreapp2.2\Projeto.Domain.pdb
+C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.csprojAssemblyReference.cache
 C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.AssemblyInfoInputs.cache
 C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.AssemblyInfo.cs
 C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.dll
 C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.pdb
-C:\Users\Vanessa\Documents\Projeto_ApiClientes\Projeto.Domain\obj\Debug\netcoreapp2.2\Projeto.Domain.csprojAssemblyReference.cache

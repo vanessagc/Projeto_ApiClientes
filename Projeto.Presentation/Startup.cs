@@ -78,7 +78,7 @@ namespace Projeto.Presentation.Api
                               Contact = new Contact
                               {
                                   Name = "VANESSA G CARVALHO",
-                                  Url = "http://www.vanessagcarvalho.com.br",
+                                  Url = "https://www.linkedin.com/in/vanessagcarvalho/",
                                   Email = "vanessagc.info@gmail.com"
                               }
                           });

@@ -9,6 +9,5 @@ namespace Projeto.Domain.Contracts.Services
         : IBaseDomainService<Cliente>
     {
         Cliente SelectByCpf(string cpf);
-        Cliente SelectByNome(string nome);
     }
 }
